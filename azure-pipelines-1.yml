@@ -32,3 +32,8 @@ steps:
     repository: 'selvacent / javadocker'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+  
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker build'
+    command: 'logout'
